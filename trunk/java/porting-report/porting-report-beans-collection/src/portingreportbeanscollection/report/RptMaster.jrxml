@@ -23,9 +23,7 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
-	<parameter name="SUBREPORT_DIR" isForPrompting="false" class="java.lang.String">
-		<defaultValueExpression ><![CDATA["./"]]></defaultValueExpression>
-	</parameter>
+	<parameter name="SUBREPORT_DIR" isForPrompting="false" class="java.io.InputStream"/>
 	<parameter name="PRM_DETAIL_VALUE" isForPrompting="false" class="java.util.Collection"/>
 
 	<field name="kd_Kategori" class="java.lang.String"/>
@@ -194,7 +192,7 @@ dengan iReport, Java dan NetBeans]]></text>
 						key="subreport-1"
 						stretchType="RelativeToBandHeight"/>
 					<dataSourceExpression><![CDATA[new JRBeanCollectionDataSource($P{PRM_DETAIL_VALUE})]]></dataSourceExpression>
-					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"RptDetail.jasper"]]></subreportExpression>
+					<subreportExpression  class="java.io.InputStream"><![CDATA[$P{SUBREPORT_DIR}]]></subreportExpression>
 				</subreport>
 			</band>
 		</detail>

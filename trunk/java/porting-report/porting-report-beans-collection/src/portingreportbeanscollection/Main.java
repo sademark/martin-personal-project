@@ -60,7 +60,9 @@ public class Main {
 
                 /* Sekarang tidak perlu lagi mencari report path, report bisa
                  * dicemplungin ke dalam jar sekalian ^_^ */
-                parameter.put("SUBREPORT_DIR", "./portingreportbeanscollection/report/");
+                parameter.put("SUBREPORT_DIR",
+                        Main.class.getResourceAsStream(
+                        "/portingreportbeanscollection/report/RptDetail.jasper"));
                 
                 /* Mengisi detail report */
                 parameter.put("PRM_DETAIL_VALUE", k.getListBarang());
