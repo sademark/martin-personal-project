@@ -1,0 +1,7 @@
+Buatlah 1 buah direktori /usr/lib/jni dengan cara : 
+# mkdir /usr/lib/jni
+
+Kemudian copy-kan file lib/libgtkjni-4.0.13.so kedalam direktori /usr/lib/jni dengan cara :
+# cp lib/libgtkjni-4.0.13.so /usr/lib/jni
+
+Jika sudah, anda bisa menjalankan demo java-gnome dengan lancar :)
